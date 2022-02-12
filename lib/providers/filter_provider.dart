@@ -6,13 +6,13 @@ extension EnumCategoryExtension on EnumCategory {
       case EnumCategory.all:
         return "all";
       case EnumCategory.breakfast:
-        return "breakfast";
+        return "সকালের নাস্তা";
       case EnumCategory.lunch:
-        return "lunch";
+        return "দুপুরের খাবার";
       case EnumCategory.dinner:
-        return "dinner";
+        return "রাতের খাবার";
       case EnumCategory.snack:
-        return "snack";
+        return "জলখাবার";
       default:
         return "";
     }

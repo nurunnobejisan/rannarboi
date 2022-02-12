@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(
-            "Cookbook",
+            "রান্নার বই",
             style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 20,
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                 child: Column(
                   children: const [
                     Text(
-                      "What would you like to cook today?",
+                      "আপনি আজ কি রান্না করতে চান?",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 30,
@@ -66,7 +66,7 @@ class HomePage extends StatelessWidget {
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.0),
                     child: Text(
-                      "Recommended for you",
+                      "আপনার জন্য প্রস্তাবিত",
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
                         fontSize: 18,

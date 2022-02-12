@@ -12,7 +12,7 @@ class FoodDetails extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Recipe",
+          "রেসিপি",
           style: TextStyle(
               color: Theme.of(context).primaryColor,
               fontWeight: FontWeight.w700,
@@ -49,7 +49,7 @@ class FoodDetails extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    'Chef ${food.author}',
+                    'রাঁধুনি ${food.author}',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
@@ -93,7 +93,7 @@ class FoodDetails extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
                   child: Text(
-                    "Ingredients",
+                    "উপকরণ",
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontSize: 18,
@@ -128,7 +128,7 @@ class FoodDetails extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        "Directions",
+                        "দিকনির্দেশ",
                         style: TextStyle(
                             fontWeight: FontWeight.w600,
                             fontSize: 18,
