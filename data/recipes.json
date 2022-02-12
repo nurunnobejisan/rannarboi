@@ -1,41 +1,41 @@
 [
     {
-        "name": "Crock Pot Roast",
-        "author":"Ryan Tillaman",
+        "name": "ক্রক পট রোস্ট",
+        "author":"রায়ান টিলাম্যান",
         "category":"Lunch",
 
         "ingredients": [
             {
                 "quantity": "1",
-                "name": "beef roast",
-                "type": "Meat"
+                "name": "গরুর মাংস রোস্ট",
+                "type": "মাংস"
             },
             {
-                "quantity": "1 package",
-                "name": "brown gravy mix",
-                "type": "Baking"
+                "quantity": "1টি প্যাকেজ",
+                "name": "বাদামী গ্রেভি মিশ্রণ",
+                "type": "বেকিং"
             },
             {
-                "quantity": "1 package",
-                "name": "dried Italian salad dressing mix",
-                "type": "Condiments"
+                "quantity": "1টি প্যাকেজ",
+                "name": "শুকনো ইতালীয় সালাদ ড্রেসিং মিশ্রণ",
+                "type": "মশলা"
             },
             {
-                "quantity": "1 package",
-                "name": "dry ranch dressing mix",
-                "type": "Condiments"
+                "quantity": "1টি প্যাকেজ",
+                "name": "শুকনো র ্যাঞ্চ ড্রেসিং মিক্স",
+                "type": "মশলা"
             },
             {
-                "quantity": "1/2 cup",
-                "name": "water",
-                "type": "Drinks"
+                "quantity": "১/২ কাপ",
+                "name": "১/২ কাপ",
+                "type": "পানীয়"
             }
         ],
         "steps": [
-            "Place beef roast in crock pot.",
-            "Mix the dried mixes together in a bowl and sprinkle over the roast.",
-            "Pour the water around the roast.",
-            "Cook on low for 7-9 hours."
+            "ক্রক পাত্রে গরুর মাংসের রোস্ট রাখুন",
+            "একটি বাটিতে শুকনো মিশ্রণগুলি একসাথে মিশ্রিত করুন এবং রোস্টের উপরে ছিটিয়ে দিন।",
+            "রোস্টের চারপাশে জল ঢেলে দিন",
+            "৭-৯ ঘণ্টা কম আঁচে রান্না করুন।"
         ],
         "timers": [
             0,
@@ -46,37 +46,37 @@
         "imageURL": "assets/images/crock.jpg"
     },
     {
-        "name": "Roasted Asparagus",
-        "author":"Ryan Tillaman",
-        "category":"Breakfast",
+        "name": "ভাজা অ্যাসপারাগাস",
+        "author":"রায়ান টিলামান",
+        "category":"নাস্তা",
         "ingredients": [
             {
-                "quantity": "1 lb",
-                "name": "asparagus",
-                "type": "Produce"
+                "quantity": "1 পাউন্ড",
+                "name": "অ্যাসপারাগাস",
+                "type": "উৎপাদন করা"
             },
             {
-                "quantity": "1 1/2 tbsp",
-                "name": "olive oil",
-                "type": "Condiments"
+                "quantity": "1 1/2 চা চামচ",
+                "name": "জলপাই তেল",
+                "type": "মসলা"
             },
             {
-                "quantity": "1/2 tsp",
-                "name": "kosher salt",
-                "type": "Baking"
+                "quantity": "1/2 চা চামচ",
+                "name": "কোশের লবণ",
+                "type": "বেকিং"
             }
         ],
         "steps": [
-            "Preheat oven to 425°F.",
-            "Cut off the woody bottom part of the asparagus spears and discard.",
-            "With a vegetable peeler, peel off the skin on the bottom 2-3 inches of the spears (this keeps the asparagus from being all.\",string.\", and if you eat asparagus you know what I mean by that).",
-            "Place asparagus on foil-lined baking sheet and drizzle with olive oil.",
-            "Sprinkle with salt.",
-            "With your hands, roll the asparagus around until they are evenly coated with oil and salt.",
-            "Roast for 10-15 minutes, depending on the thickness of your stalks and how tender you like them.",
-            "They should be tender when pierced with the tip of a knife.",
-            "The tips of the spears will get very brown but watch them to prevent burning.",
-            "They are great plain, but sometimes I serve them with a light vinaigrette if we need something acidic to balance out our meal."
+            "প্রিহিট ওভেন 425°F।",
+            "অ্যাসপারাগাস স্পিয়ারের কাঠের নীচের অংশটি কেটে ফেলুন এবং ফেলে দিন।",
+            "একটি সবজির খোসা দিয়ে, বর্শার নীচের 2-3 ইঞ্চি চামড়ার খোসা ছাড়িয়ে ফেলুন (এটি অ্যাসপারাগাসকে সম্পূর্ণ হওয়া থেকে রক্ষা করে।",
+            "ফয়েল-রেখাযুক্ত বেকিং শীটে অ্যাসপারাগাস রাখুন এবং জলপাই তেল দিয়ে গুঁড়ি গুঁড়ি দিন।",
+            "লবণ দিয়ে ছিটিয়ে দিন।",
+            "আপনার হাত দিয়ে, অ্যাসপারাগাসটিকে চারপাশে ঘুরিয়ে দিন যতক্ষণ না তারা সমানভাবে তেল এবং লবণ দিয়ে লেপে যায়।",
+            "10-15 মিনিটের জন্য রোস্ট করুন, আপনার ডালপালা পুরুত্বের উপর নির্ভর করে এবং আপনি সেগুলি কতটা কোমল পছন্দ করেন।",
+            "ছুরির ডগা দিয়ে বিদ্ধ করার সময় তাদের কোমল হওয়া উচিত।",
+            "বর্শার টিপস খুব বাদামী হয়ে যাবে কিন্তু পোড়া প্রতিরোধ করতে তাদের দেখুন।",
+            "এগুলি দুর্দান্ত সরল, তবে কখনও কখনও আমি তাদের খাবারের ভারসাম্য বজায় রাখতে অম্লীয় কিছুর প্রয়োজন হলে হালকা ভিনাইগ্রেট দিয়ে পরিবেশন করি।"
         ],
         "timers": [
             0,
@@ -93,43 +93,42 @@
         "imageURL": "assets/images/asparagus.jpg"
     },
     {
-        "name": "Curried Lentils and Rice",
-        "author":"Ryan Tillaman",
-        "category":"Dinner",
+        "name": "তরকারি মসুর ডাল এবং ভাত",
+        "author": "রায়ান টিলামান",
+        "category": "ডিনার",
 
         "ingredients": [
             {
-                "quantity": "1 quart",
-                "name": "beef broth",
-                "type": "Misc"
+                "quantity": "1 কোয়ার্ট",
+                "name": "গরুর মাংস ব্রথ",
+                "type": "বিবিধ"
             },
             {
-                "quantity": "1 cup",
-                "name": "dried green lentils",
-                "type": "Misc"
+                "quantity": "1 কাপ",
+                "name": "শুকনো সবুজ মসুর ডাল",
+                "type": "বিবিধ"
             },
             {
-                "quantity": "1/2 cup",
-                "name": "basmati rice",
-                "type": "Misc"
+                "quantity": "1/2 কাপ",
+                "name": "বাসমতী চাল",
+                "type": "বিবিধ"
             },
             {
-                "quantity": "1 tsp",
-                "name": "curry powder",
-                "type": "Condiments"
+                "quantity": "1 চা চামচ",
+                "name": "তরকারি মসলা",
+                "type": "মশলা"
             },
             {
-                "quantity": "1 tsp",
-                "name": "salt",
-                "type": "Condiments"
+                "quantity": "1 চা চামচ",
+                "name": "লবণ",
+                "type": "মশলা"
             }
         ],
-        "steps": [
-            "Bring broth to a low boil.",
-            "Add curry powder and salt.",
-            "Cook lentils for 20 minutes.",
-            "Add rice and simmer for 20 minutes.",
-            "Enjoy!"
+        "steps": ["ঝোল কম ফোড়াতে আনুন।",
+            "কারি গুঁড়া এবং লবণ যোগ করুন।",
+            "20 মিনিটের জন্য মসুর ডাল রান্না করুন।",
+            "ভাত যোগ করুন এবং 20 মিনিটের জন্য সিদ্ধ করুন।",
+            "আনন্দ!"
         ],
         "timers": [
             0,
@@ -141,59 +140,59 @@
         "imageURL": "assets/images/curried_lentilis.jpg"
     },
     {
-        "name": "Big Night Pizza",
-        "author":"Ryan Tillaman",
-        "category":"Snack",
+        "name": "বিগ নাইট পিজ্জা",
+        "author": "রায়ান টিলাম্যান",
+        "category":"স্ন্যাক",
         "ingredients": [
             {
-                "quantity": "5 teaspoons",
-                "name": "yeast",
-                "type": "Baking"
+                "quantity": "5 চা চামচ",
+                "name": "খামির",
+                "type": "বেকিং"
             },
             {
-                "quantity": "5 cups",
-                "name": "flour",
-                "type": "Baking"
+                "quantity": "5 কাপ",
+                "name": "ময়দা",
+                "type": "বেকিং"
             },
             {
-                "quantity": "4 tablespoons",
-                "name": "vegetable oil",
-                "type": "Baking"
+                "quantity":  "4 টেবিল চামচ",
+                "name":  "উদ্ভিজ্জ তেল",
+                "type":  "বেকিং"
             },
             {
-                "quantity": "2 tablespoons",
-                "name": "sugar",
-                "type": "Baking"
+                "quantity": "2 টেবিল চামচ",
+                "name":  "চিনি",
+                "type": "বেকিং"
             },
             {
-                "quantity": "2 teaspoons",
-                "name": "salt",
-                "type": "Baking"
+                "quantity": "2 চা চামচ",
+                "name":  "লবণ",
+                "type":  "বেকিং"
             },
             {
-                "quantity": "2 cups",
-                "name": "hot water",
-                "type": "Misc"
+                "quantity":  "2 কাপ",
+                "name": "গরম জল",
+                "type": "মিসক"
             },
             {
-                "quantity": "1/4 cup",
-                "name": "pizza sauce",
-                "type": "Misc"
+                "quantity":  "1/4 কাপ",
+                "name": "পিজ্জা সস",
+                "type": "মিসক"
             },
             {
-                "quantity": "3/4 cup",
-                "name": "mozzarella cheese",
-                "type": "Dairy"
+                "quantity": "3/4 কাপ",
+                "name": "মোজারেলা পনির",
+                "type": 'দুগ্ধ'
             }
         ],
         "steps": [
-            "Add hot water to yeast in a large bowl and let sit for 15 minutes.",
-            "Mix in oil, sugar, salt, and flour and let sit for 1 hour.",
-            "Knead the dough and spread onto a pan.",
-            "Spread pizza sauce and sprinkle cheese.",
-            "Add any optional toppings as you wish.",
-            "Bake at 400 deg Fahrenheit for 15 minutes.",
-            "Enjoy!"
+            "একটি বড় পাত্রে খামিরে গরম জল যোগ করুন এবং 15 মিনিটের জন্য বসুন।",
+            "তেল, চিনি, লবণ এবং ময়দা মেশান এবং 1 ঘন্টা বসতে দিন।",
+            "ময়দা মাখুন এবং একটি প্যানে ছড়িয়ে দিন।",
+            "পিজ্জা সস ছড়িয়ে দিন এবং পনির ছিটিয়ে দিন।",
+            "আপনার ইচ্ছামতো যেকোনো ঐচ্ছিক টপিং যোগ করুন।",
+            "400 ডিগ্রী ফারেনহাইট এ 15 মিনিট বেক করুন।",
+            "আনন্দ!"
         ],
         "timers": [
             15,
@@ -207,50 +206,50 @@
         "imageURL": "assets/images/bignight.png"
     },
     {
-        "name": "Cranberry and Apple Stuffed Acorn Squash Recipe",
-        "author":"Ryan Tillaman",
-        "category":"Breakfast",
+        "name": "ক্র্যানবেরি এবং অ্যাপল স্টাফড অ্যাকর্ন স্কোয়াশ রেসিপি",
+        "author": "রায়ান টিলাম্যান",
+        "category":"সকালের নাস্তা",
         "ingredients": [
             {
                 "quantity": "2",
-                "name": "acorn squash",
-                "type": "Produce"
+                "name": "অ্যাকর্ন স্কোয়াশ",
+                "type": "উৎপাদন"
             },
             {
                 "quantity": "1",
-                "name": "boiling water",
-                "type": "Drinks"
+                "name": "ফুটন্ত জল",
+                "type": "পানীয়"
             },
             {
                 "quantity": "2",
-                "name": "apples chopped into 1.4 inch pieces",
-                "type": "Produce"
+                "name": "আপেল 1.4 ইঞ্চি টুকরা মধ্যে কাটা",
+                "type": "উৎপাদন"
             },
             {
-                "quantity": "1/2 cup",
-                "name": "dried cranberries",
-                "type": "Produce"
+                "quantity": "1/2 কাপ",
+                "name": "শুকনো ক্র্যানবেরি",
+                "type": "উৎপাদন"
             },
             {
-                "quantity": "1 teaspoon",
-                "name": "cinnamon",
-                "type": "Baking"
+                "quantity": "1 চা চামচ",
+                "name": "দারুচিনি",
+                "type": "বেকিং"
             },
             {
-                "quantity": "2 tablespoons",
-                "name": "melted butter",
-                "type": "Dairy"
+                "quantity": "2 টেবিল চামচ",
+                "name": "গলিত মাখন",
+                "type":  "দুগ্ধ"
             }
         ],
         "steps": [
-            "Cut squash in half, remove seeds.",
-            "Place squash in baking dish, cut-side down.",
-            "Pour 1/4-inch water into dish.",
-            "Bake for 30 minutes at 350 degrees F.",
-            "In large bowl, combine remaining ingredients.",
-            "Remove squash from oven, fill with mix.",
-            "Bake for 30-40 more minutes, until squash tender.",
-            "Enjoy!"
+            "স্কোয়াশকে অর্ধেক করে কেটে নিন, বীজ সরান।",
+            "বেকিং ডিশে স্কোয়াশ রাখুন, সাইড-ডাউন করুন।",
+            "থালায় 1/4-ইঞ্চি জল ঢালুন।",
+            "350 ডিগ্রি ফারেনহাইটে 30 মিনিট বেক করুন।",
+            "বড় বাটিতে, অবশিষ্ট উপাদানগুলি একত্রিত করুন।",
+            "ওভেন থেকে স্কোয়াশ সরান, মিশ্রণ দিয়ে পূরণ করুন।",
+            "স্কোয়াশ টেন্ডার না হওয়া পর্যন্ত আরও 30-40 মিনিট বেক করুন।",
+            "আনন্দ!"
         ],
         "timers": [
             0,
