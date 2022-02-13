@@ -1,6 +1,6 @@
+import 'package:cookbook/time/time.dart';
 import 'package:cookbook/widgets/categories.dart';
 import 'package:cookbook/widgets/food_showcase.dart';
-import 'package:cookbook/widgets/searchbar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -17,9 +17,11 @@ class HomePage extends StatelessWidget {
                 fontSize: 20,
                 color: Theme.of(context).primaryColor),
           ),
+
           elevation: 0,
           backgroundColor: Colors.white,
         ),
+
         body: SingleChildScrollView(
           physics: const ScrollPhysics(),
           child: Column(
@@ -41,7 +43,21 @@ class HomePage extends StatelessWidget {
                     // Searchbar(),
                   ],
                 ),
+              ),IconButton(
+                icon: const Icon(
+                  Icons.timer,
+                ),
+                color: Colors.green,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const cooking_timeApp(),
+                    ),
+                  );
+                },
               ),
+
               const SizedBox(
                 height: 20,
               ),

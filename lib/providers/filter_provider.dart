@@ -4,7 +4,7 @@ extension EnumCategoryExtension on EnumCategory {
   String get value {
     switch (this) {
       case EnumCategory.all:
-        return "all";
+        return "সব";
       case EnumCategory.breakfast:
         return "সকালের নাস্তা";
       case EnumCategory.lunch:

@@ -1,0 +1,128 @@
+import 'package:flutter/material.dart';
+import 'package:cookbook/time/components/phase_chip.dart';
+import 'package:cookbook/time/components/rename_dialogue.dart';
+import 'package:cookbook/time/model/recipe.dart';
+
+class RecipeView extends StatelessWidget {
+  final Recipe recipe;
+  final Function deleteRecipeCallback;
+  final Function renameRecipeCallback;
+  final Function saveRecipeCallback;
+  final Function showWarningDialogue;
+  String? routeToPush;
+
+  RecipeView(this.recipe, this.deleteRecipeCallback, this.renameRecipeCallback,
+      this.saveRecipeCallback, this.showWarningDialogue, {routeToPush}){
+    this.routeToPush = routeToPush??recipe.documentId;
+    this.recipe.ingredients.sort((a,b) => b.initialDuration.compareTo(a.initialDuration));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(5),
+      child: ListTile(
+        onTap: () {
+          showWarningDialogue(() => Navigator.pushNamed(context, '/$routeToPush'));
+        },
+        title: Container(
+          padding: const EdgeInsets.symmetric(vertical: 5),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              const Expanded(
+                child: Padding(
+                  padding: EdgeInsets.all(0),
+                ),
+              ),
+              Expanded(
+                flex: 8,
+                child: Text(
+                  recipe.name,
+                  style: Theme.of(context).textTheme.headline5,
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Expanded(
+                child: PopupMenuButton(
+                  onSelected: (selected) {
+                    switch (selected) {
+                      case "rename":
+                        showDialog(
+                          context: context,
+                          builder: (context) =>
+                              RenameDialogue(
+                                "Rename Recipe",
+                                recipe.name,
+                                    (String newValue) {
+                                  recipe.name = newValue;
+                                  saveRecipeCallback(recipe);
+                                },
+                              ),
+                        );
+                        break;
+                      case "delete":
+                        deleteRecipeCallback(recipe);
+                        break;
+                    }
+                  },
+                  itemBuilder: (context) {
+                    return [
+                      const PopupMenuItem(
+                        value: "rename",
+                        child: Text("Rename"),
+                      ),
+                      const PopupMenuItem(
+                        value: "delete",
+                        child: Text("Delete"),
+                      )
+                    ];
+                  },
+                ),
+              )
+            ],
+          ),
+        ),
+        subtitle: Column(
+            children: recipe.ingredients
+                .map((ingredient) => Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(5),
+                  child: Text(
+                    ingredient.name,
+                    style: Theme.of(context).textTheme.subtitle1,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: ingredient.phases
+                        .map((phase) => PhaseChip(phase, (phase) {showWarningDialogue(() => Navigator.pushNamed(context, '/$routeToPush'));},
+                        recipe.initialDuration))
+                        .toList(),
+                  ),
+                )
+              ],
+            ))
+                .toList()),
+      ),
+    );
+  }
+
+  void renameRecipe(BuildContext context, Recipe recipe) {
+    showDialog(
+      context: context,
+      builder: (context) => RenameDialogue(
+            "Rename Recipe",
+            recipe.name,
+            (String newValue) {
+              recipe.name = newValue;
+              saveRecipeCallback(recipe);
+            },
+          ),
+    );
+  }
+}
