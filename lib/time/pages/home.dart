@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:cookbook/time/components/intro_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:cookbook/time/components/countdown_view.dart';
 import 'package:cookbook/time/components/custom_drawer.dart';
@@ -20,8 +21,7 @@ import 'package:vector_math/vector_math_64.dart';
 
 class HomePage extends StatefulWidget {
   HomePage(
-      {
-      required this.notify,
+      {required this.notify,
       required this.saveRecipeCallback,
       required this.removeNotification,
       this.notifications: const [],
@@ -29,7 +29,8 @@ class HomePage extends StatefulWidget {
       required this.timerFuture,
       required this.muteAlarm,
       required this.alerting});
-      // : super(key: key); <- ??
+
+  // : super(key: key); <- ??
 
   final Future<TimerModel> timerFuture;
   final Function notify;
@@ -48,14 +49,15 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController _tabController;
+
   // late Animation<double> animation;
   late AnimationController animationController;
-
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this, initialIndex: widget.initialTab);
+    _tabController =
+        TabController(length: 3, vsync: this, initialIndex: widget.initialTab);
     _tabController.addListener(() => widget.muteAlarm());
     widget.timerFuture.then((timer) {
       return timer.clock.getTickStream().listen((tick) {
@@ -82,31 +84,46 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     return FutureBuilder(
         future: widget.timerFuture,
         builder: (context, timerSnapshot) {
-          if (timerSnapshot.connectionState == ConnectionState.done && timerSnapshot.data != null) {
+          if (timerSnapshot.connectionState == ConnectionState.done &&
+              timerSnapshot.data != null) {
             TimerModel timer = timerSnapshot.data as TimerModel; //
             timer.recipe.ingredients
                 .sort((a, b) => b.initialDuration.compareTo(a.initialDuration));
             return Scaffold(
               appBar: AppBar(
+
                 title: Text(
                   "${timer.recipe.name}",
+
+
                 ),
                 actions: <Widget>[
+                  IconButton(
+                    icon: Icon(Icons.help),
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => const HelpSlider(),
+                          ));
+                    },
+                  ),
+
                   Builder(
                     builder: (context) => FlatButton(
-                          onPressed: () {
-                            widget.saveRecipeCallback(timer.recipe);
-                            Scaffold.of(context).showSnackBar(
-                                const SnackBar(content: const Text("Recipe Saved!")));
-                          },
-                          child: const Icon(
-                            Icons.save,
-                            // color: Theme.of(context)
-                            //     .buttonTheme
-                            //     .colorScheme
-                            //     .onPrimary,
-                          ),
-                        ),
+                      onPressed: () {
+                        widget.saveRecipeCallback(timer.recipe);
+                        Scaffold.of(context).showSnackBar(const SnackBar(
+                            content: const Text("Recipe Saved!")));
+                      },
+                      child: const Icon(
+                        Icons.save,
+                        // color: Theme.of(context)
+                        //     .buttonTheme
+                        //     .colorScheme
+                        //     .onPrimary,
+                      ),
+                    ),
                   ),
                   PopupMenuButton(itemBuilder: (context) {
                     return [
@@ -124,9 +141,17 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                                           Navigator.of(context).pop();
                                         }));
                               },
-                              child: const Text("Rename Recipe")))
+                              child: const Text("Rename Recipe")
+                          )
+
+                      )
+
+
                     ];
-                  })
+
+                  }
+                  )
+
                 ],
               ),
               drawer: const CustomDrawer(),
@@ -176,6 +201,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               flex: 5,
               child: timer.recipe.ingredients.isNotEmpty
                   ? buildIngredientList(timer)
+
                   : ListTile(
                       title: Text(
                         "Try Adding an Ingredient",
@@ -183,7 +209,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                         textAlign: TextAlign.center,
                       ),
                     ),
+
+
             )
+
           ],
         ),
       ),
@@ -262,6 +291,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       color: Theme.of(context).primaryColor,
       child: TabBar(
         tabs: <Widget>[
+
           Container(
             padding: const EdgeInsets.all(20),
             child: const Icon(Icons.timer),
@@ -281,6 +311,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           )
         ],
         controller: _tabController,
+
       ),
     );
   }
@@ -295,20 +326,20 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     Navigator.of(context).push(
       MaterialPageRoute(
         builder: (context) => EditPhasePage.empty(
-              submitCallback: (Phase phase) {
-                timer.recipe.ingredients[ingredientIndex].phases.add(phase);
-                if (timer.recipe.ingredients[ingredientIndex].state ==
-                    TimerState.FINISHED) {
-                  timer.recipe.ingredients[ingredientIndex].state =
-                      TimerState.RUNNING;
-                }
-                recipeChanged(timer);
-              },
-              deleteCallback: () {
-                Navigator.of(context).pop();
-                Navigator.of(context).pop();
-              },
-            ),
+          submitCallback: (Phase phase) {
+            timer.recipe.ingredients[ingredientIndex].phases.add(phase);
+            if (timer.recipe.ingredients[ingredientIndex].state ==
+                TimerState.FINISHED) {
+              timer.recipe.ingredients[ingredientIndex].state =
+                  TimerState.RUNNING;
+            }
+            recipeChanged(timer);
+          },
+          deleteCallback: () {
+            Navigator.of(context).pop();
+            Navigator.of(context).pop();
+          },
+        ),
       ),
     );
   }
@@ -330,13 +361,13 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       context,
       MaterialPageRoute(
         builder: (context) => EditIngredientPage(
-              ingredient: timer.recipe.ingredients[ingredientIndex],
-              submitCallback: (IngredientModel ingredient) {
-                timer.recipe.ingredients[ingredientIndex] = ingredient;
-                recipeChanged(timer);
-              },
-              alertCallback: widget.notify,
-            ),
+          ingredient: timer.recipe.ingredients[ingredientIndex],
+          submitCallback: (IngredientModel ingredient) {
+            timer.recipe.ingredients[ingredientIndex] = ingredient;
+            recipeChanged(timer);
+          },
+          alertCallback: widget.notify,
+        ),
       ),
     );
   }
@@ -346,12 +377,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       context,
       MaterialPageRoute(
         builder: (context) => EditIngredientPage.empty(
-              submitCallback: (IngredientModel ingredient) {
-                timer.recipe.ingredients.add(ingredient);
-                recipeChanged(timer);
-              },
-              alertCallback: widget.notify,
-            ),
+          submitCallback: (IngredientModel ingredient) {
+            timer.recipe.ingredients.add(ingredient);
+            recipeChanged(timer);
+          },
+          alertCallback: widget.notify,
+        ),
       ),
     );
   }
@@ -362,18 +393,18 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       context,
       MaterialPageRoute(
         builder: (context) => EditPhasePage(
-              phase: ingredient.phases[index],
-              submitCallback: (Phase phase) {
-                phase.state = TimerState.PENDING;
-                ingredient.phases[index] = phase;
-                recipeChanged(timer);
-              },
-              deleteCallback: () {
-                ingredient.phases.removeAt(index);
-                recipeChanged(timer);
-                Navigator.of(context).pop();
-              },
-            ),
+          phase: ingredient.phases[index],
+          submitCallback: (Phase phase) {
+            phase.state = TimerState.PENDING;
+            ingredient.phases[index] = phase;
+            recipeChanged(timer);
+          },
+          deleteCallback: () {
+            ingredient.phases.removeAt(index);
+            recipeChanged(timer);
+            Navigator.of(context).pop();
+          },
+        ),
       ),
     );
   }

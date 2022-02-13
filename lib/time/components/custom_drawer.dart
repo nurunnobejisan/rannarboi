@@ -10,15 +10,7 @@ class CustomDrawer extends StatelessWidget {
     return Drawer(
       child: Column(
         children: <Widget>[
-          const Center(
-            child: UserAccountsDrawerHeader(
-              accountName: Text("User"),
-              accountEmail: Text("Email"),
-              currentAccountPicture: CircleAvatar(
-                child: Icon(Icons.person),
-              ),
-            ),
-          ),
+
           ListTile(
               title: const Text("Timer"),
               leading: const Icon(Icons.timer),

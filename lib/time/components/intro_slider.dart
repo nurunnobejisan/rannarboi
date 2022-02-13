@@ -16,14 +16,14 @@ class _HelpSliderState extends State<HelpSlider> {
   void initState() {
     super.initState();
     slides.add(Slide(
-        title: "Welcome to Sous Chef",
+        title: "Welcome to Bangla Chef",
         backgroundColor: Colors.orange,
         centerWidget: Image.asset(
           "assets/chef-hat.png",
           height: 200,
         ),
         description:
-            "I'm here to make sure all of your dishes finish at the same time"));
+            "আপনার সমস্ত খাবার একই সময়ে শেষ হয় তা নিশ্চিত করতে আমি এখানে আছি"));
     slides.add(Slide(
         title: "Recipes",
         backgroundColor: Colors.blue,
@@ -32,8 +32,8 @@ class _HelpSliderState extends State<HelpSlider> {
           height: 200,
         ),
         description:
-            "Each recipe can contain multiple ingredients. Add an ingredient for each dish, such as potatoes or chicken. "
-            "Timers for each ingredient will run simulatiously and finish at the same time"));
+            "প্রতিটি রেসিপিতে একাধিক উপাদান থাকতে পারে। প্রতিটি ডিশের জন্য একটি উপাদান যোগ করুন, যেমন আলু বা মুরগি।  "
+            "প্রতিটি উপাদানের জন্য টাইমারগুলি অনুকরণীয়ভাবে চলবে এবং একই সময়ে শেষ হবে"));
     slides.add(Slide(
         title: "Ingredients",
         backgroundColor: Colors.red,
@@ -41,8 +41,8 @@ class _HelpSliderState extends State<HelpSlider> {
           "assets/fish.png",
           height: 200,
         ),
-        description: "Ingredients are made up of phases. "
-            "Add multiple phases if you need to do various steps for an ingredient, such as marinade for 20 minutes then bake for 40 minutes"));
+        description: "উপাদানগুলি পর্যায়ক্রমে গঠিত হয়। "
+            "একাধিক ফেজ যোগ করুন যদি আপনি একটি উপাদানের জন্য বিভিন্ন পদক্ষেপ করতে চান, যেমন 20 মিনিটের জন্য marinade তারপর 40 মিনিটের জন্য বেক করুন"));
     slides.add(Slide(
         title: "Start The Timer",
         backgroundColor: Colors.green,
@@ -50,8 +50,8 @@ class _HelpSliderState extends State<HelpSlider> {
           "assets/stopwatch.png",
           height: 200,
         ),
-        description: "Once you have your timer ready, press play. "
-            "You will get notifications once an ingredient timer is about to start, and each time a phase finishes"));
+        description: "একবার আপনার টাইমার প্রস্তুত হয়ে গেলে, প্লে টিপুন।"
+        "একবার একটি উপাদান টাইমার শুরু হতে চলেছে একবার আপনি বিজ্ঞপ্তি পাবেন, এবং প্রতিবার একটি ফেজ শেষ হয়"));
     slides.add(Slide(
         title: "Schedule Timers",
         backgroundColor: Colors.orange,
@@ -59,8 +59,8 @@ class _HelpSliderState extends State<HelpSlider> {
           "assets/scheduledstopwatch.png",
           height: 200,
         ),
-        description: "Schedule a timer to finish at a specific time. "
-            "Sous Chef will let you know when its time to put in your first dish"));
+        description: "একটি নির্দিষ্ট সময়ে শেষ করার জন্য একটি টাইমার নির্ধারণ করুন।"
+        "Sous শেফ আপনার প্রথম ডিশ মধ্যে রাখা সময় কখন আপনাকে জানাতে হবে"));
   }
 
   void goHome(BuildContext context) {
@@ -69,10 +69,10 @@ class _HelpSliderState extends State<HelpSlider> {
 
   @override
   Widget build(BuildContext context) {
-    return new IntroSlider(
-      slides: this.slides,
-      onDonePress: () => this.goHome(context),
-      onSkipPress: () => this.goHome(context),
+    return IntroSlider(
+      slides: slides,
+      onDonePress: () => goHome(context),
+      onSkipPress: () => goHome(context),
     );
   }
 }
