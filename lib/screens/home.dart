@@ -1,5 +1,6 @@
 
 import 'dart:io';
+import 'package:cookbook/GamePage1/game.dart';
 import 'package:cookbook/popmore/privacy_policy.dart';
 import 'package:cookbook/time/time.dart';
 import 'package:cookbook/widgets/categories.dart';
@@ -74,6 +75,20 @@ class HomePage extends StatelessWidget {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const cooking_timeApp(),
+                    ),
+                  );
+                },
+              ),
+              IconButton(
+                icon: const Icon(
+                  Icons.timer,
+                ),
+                color: Colors.orange,
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => cookbook(),
                     ),
                   );
                 },
