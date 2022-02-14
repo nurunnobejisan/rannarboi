@@ -43,6 +43,8 @@ dependencies:
   cloud_firestore: ^3.1.4
   firebase_core: ^1.10.5
   flutter_local_notifications: ^9.1.5
+  shared_preferences: ^2.0.13
+  simple_animations: ^4.0.1
 
 
 dev_dependencies:
