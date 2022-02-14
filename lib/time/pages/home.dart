@@ -3,7 +3,7 @@ import 'dart:math';
 import 'package:cookbook/time/components/intro_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:cookbook/time/components/countdown_view.dart';
-import 'package:cookbook/time/components/custom_drawer.dart';
+
 import 'package:cookbook/time/components/ingredient_list_view.dart';
 import 'package:cookbook/time/components/rename_dialogue.dart';
 import 'package:cookbook/time/components/schedule_timer_dialogue.dart';
@@ -89,97 +89,77 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             TimerModel timer = timerSnapshot.data as TimerModel; //
             timer.recipe.ingredients
                 .sort((a, b) => b.initialDuration.compareTo(a.initialDuration));
-            return Scaffold(
-              appBar: AppBar(
+            return Container(color: const Color(0xfff55a00),
+              child: Scaffold(
+                appBar: AppBar(
 
-                title: Text(
-                  "${timer.recipe.name}",
+                  title: const Text(
+                    "রান্নার বই",
+                    style: TextStyle(
+                      color: Color(0xFFFFFFFF),
+                    ),
 
 
-                ),
-                actions: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.help),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (BuildContext context) => const HelpSlider(),
-                          ));
-                    },
                   ),
-
-                  Builder(
-                    builder: (context) => FlatButton(
+                  actions: <Widget>[
+                    IconButton(
+                      icon: const Icon(Icons.help),
+                      color: const Color(0xFFFFFFFF),
                       onPressed: () {
-                        widget.saveRecipeCallback(timer.recipe);
-                        Scaffold.of(context).showSnackBar(const SnackBar(
-                            content: const Text("Recipe Saved!")));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (BuildContext context) => const HelpSlider(),
+                            ));
                       },
-                      child: const Icon(
-                        Icons.save,
-                        // color: Theme.of(context)
-                        //     .buttonTheme
-                        //     .colorScheme
-                        //     .onPrimary,
+                    ),
+
+                    Builder(
+                      builder: (context) => FlatButton(
+                        onPressed: () {
+                          widget.saveRecipeCallback(timer.recipe);
+                          Scaffold.of(context).showSnackBar(const SnackBar(
+                              content: Text("রেসিপি সংরক্ষিত!")));
+                        },
+                        child: const Icon(
+                          Icons.save, color: Color(0xFFFFFFFF),
+                          // color: Theme.of(context)
+                          //     .buttonTheme
+                          //     .colorScheme
+                          //     .onPrimary,
+                        ),
                       ),
                     ),
-                  ),
-                  PopupMenuButton(itemBuilder: (context) {
-                    return [
-                      PopupMenuItem(
-                          child: FlatButton(
-                              onPressed: () {
-                                showDialog(
-                                    context: context,
-                                    builder: (context) => RenameDialogue(
-                                            "Rename Recipe", timer.recipe.name,
-                                            (String newValue) {
-                                          timer.recipe.name = newValue;
-                                          widget
-                                              .saveRecipeCallback(timer.recipe);
-                                          Navigator.of(context).pop();
-                                        }));
-                              },
-                              child: const Text("Rename Recipe")
-                          )
 
-                      )
+                  ],
+                ),
 
-
-                    ];
-
-                  }
-                  )
-
-                ],
-              ),
-              drawer: const CustomDrawer(),
-              body: SafeArea(
-                child: TabBarView(controller: _tabController, children: [
-                  buildTimerTab(timer),
-                  TimelineTab(timer.recipe.getTimelineList()),
-                  NotificationTab(
-                      widget.notifications, widget.removeNotification)
-                ]),
-              ),
-              floatingActionButton: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  const Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 15.0,
+                body: SafeArea(
+                  child: TabBarView(controller: _tabController, children: [
+                    buildTimerTab(timer),
+                    TimelineTab(timer.recipe.getTimelineList()),
+                    NotificationTab(
+                        widget.notifications, widget.removeNotification)
+                  ]),
+                ),
+                floatingActionButton: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    const Padding(
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 15.0,
+                      ),
                     ),
-                  ),
-                  FloatingActionButton(
-                    onPressed: () {
-                      newIngredient(timer);
-                    },
-                    child: const Icon(Icons.add),
-                  )
-                ],
+                    FloatingActionButton(
+                      onPressed: () {
+                        newIngredient(timer);
+                      },
+                      child: const Icon(Icons.add),
+                    )
+                  ],
+                ),
+                bottomNavigationBar: buildNavbar(context),
               ),
-              bottomNavigationBar: buildNavbar(context),
             );
           } else {
             return const SplashScreen();
@@ -204,7 +184,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
 
                   : ListTile(
                       title: Text(
-                        "Try Adding an Ingredient",
+                        "একটি উপাদান যোগ করার চেষ্টা করুন",
                         style: Theme.of(context).textTheme.caption,
                         textAlign: TextAlign.center,
                       ),
@@ -261,7 +241,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     showDialog(
         context: context,
         builder: (context) => ScheduleTimerDialogue(
-                "Finish At", timer.scheduledTime, (selectedTime) {
+                "শেষ করুন", timer.scheduledTime, (selectedTime) {
               setState(() {
                 timer.scheduledTime = selectedTime ?? TimeOfDay.now();
               });

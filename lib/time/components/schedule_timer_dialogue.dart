@@ -40,17 +40,17 @@ class _ScheduleTimerDialogueState extends State<ScheduleTimerDialogue> {
             },
             child: Text(
               selectedTime == null ? "-- : --" : selectedTime!.format(context),
-              style: TextStyle(fontSize: 30)
+              style: const TextStyle(fontSize: 30)
             ),
           ),
           FlatButton.icon(
-            icon: Icon(Icons.timer_off),
+            icon: const Icon(Icons.timer_off),
             onPressed: () {
               setState(() {
                 selectedTime = null;
               });
             },
-            label: Text("Clear"),
+            label: const Text("পরিষ্কার"),
           )
         ]),
       ),
@@ -59,14 +59,14 @@ class _ScheduleTimerDialogueState extends State<ScheduleTimerDialogue> {
           onPressed: () {
             Navigator.of(context).pop();
           },
-          child: Text("Cancel"),
+          child: const Text("বাতিল করুন"),
         ),
         FlatButton(
           onPressed: () {
             widget.submitCallback(selectedTime);
             Navigator.of(context).pop();
           },
-          child: Text("OK"),
+          child: const Text("ঠিক আছে"),
         ),
       ],
     );
@@ -84,14 +84,14 @@ class _ScheduleTimerDialogueState extends State<ScheduleTimerDialogue> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-            title: Text("Invalid Time"),
-            content: Text("Please select a time in the future"),
+            title: const Text("অবৈধ সময়"),
+            content: const Text("ভবিষ্যতে একটি সময় নির্বাচন করুন"),
             actions: <Widget>[
               FlatButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: Text("OK"),
+                child: const Text("ঠিক আছে"),
               )
             ],
           ),

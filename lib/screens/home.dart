@@ -47,7 +47,7 @@ class HomePage extends StatelessWidget {
                 icon: const Icon(
                   Icons.timer,
                 ),
-                color: Colors.green,
+                color: Colors.orange,
                 onPressed: () {
                   Navigator.push(
                     context,

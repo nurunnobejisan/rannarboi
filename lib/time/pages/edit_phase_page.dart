@@ -37,7 +37,7 @@ class _EditPhasePageState extends State<EditPhasePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Edit Cooking Step"),
+        title: const Text("রান্নার ধাপ সম্পাদনা করুন"),
         actions: <Widget>[
           FlatButton(
               onPressed: submit,
@@ -47,15 +47,15 @@ class _EditPhasePageState extends State<EditPhasePage> {
               )),
           PopupMenuButton(onSelected: (buttonPressed) {
             switch (buttonPressed) {
-              case "delete":
+              case "মুছে ফেলা":
                 widget.deleteCallback();
                 break;
             }
           }, itemBuilder: (popMenuContext) {
             return [
               const PopupMenuItem<String>(
-                value: "delete",
-                child: Text("Delete"),
+                value: "মুছে ফেলা",
+                child: Text("মুছে ফেলা"),
               ),
             ];
           })
@@ -109,7 +109,7 @@ class _EditPhasePageState extends State<EditPhasePage> {
             child: Container(
               padding: const EdgeInsets.all(10),
               child: Text(
-                "Duration",
+                "সময়কাল",
                 style: Theme.of(context).textTheme.subtitle1,
               ),
             ),
@@ -139,7 +139,7 @@ class _EditPhasePageState extends State<EditPhasePage> {
               child: Container(
                 padding: const EdgeInsets.all(10),
                 child: Text(
-                  "Notes",
+                  "মন্তব্য",
                   style: Theme.of(context).textTheme.subtitle1,
                 ),
               ),
@@ -151,7 +151,7 @@ class _EditPhasePageState extends State<EditPhasePage> {
                   padding: const EdgeInsets.all(5),
                   child: TextField(
                     textCapitalization: TextCapitalization.sentences,
-                    decoration: const InputDecoration(hintText: "e.g. Cook at 200°c"),
+                    decoration: const InputDecoration(hintText: "যেমন 190 ডিগ্রি সেলসিয়াসে রান্না করুন"),
                     keyboardType: TextInputType.multiline,
                     maxLines: 5,
                     textAlign: TextAlign.center,

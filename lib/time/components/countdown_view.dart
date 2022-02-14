@@ -30,7 +30,7 @@ class CountdownView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                    "Total Time Remaining",
+                    "মোট সময় বাকি",
                     style: Theme.of(context).textTheme.headline5,
                   ),
                   DurationView(
@@ -46,7 +46,7 @@ class CountdownView extends StatelessWidget {
                         child: FlatButton.icon(
                           icon: const Icon(Icons.schedule),
                           label: !timer.isScheduled()
-                              ? const Text("Schedule", textScaleFactor: 0.95)
+                              ? const Text("সময়সূচী", textScaleFactor: 0.95)
                               : DurationView(
                                   duration: timer.scheduledTimeRemaining,
                                 ),
@@ -78,7 +78,7 @@ class CountdownView extends StatelessWidget {
                         child: FlatButton.icon(
                           icon: const Icon(Icons.restore),
                           label: const Text(
-                            "Reset",
+                            "পুনরায় বসান",
                           ),
                           onPressed: () {
                             resetCallback();
@@ -101,7 +101,7 @@ class CountdownView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Text(
-                      "Up Next: ${timer.recipe.getNextAlertingPhase().ingredientName} - ${timer.recipe.getNextAlertingPhase().phaseName}",
+                      "পরবর্তী আসছে: ${timer.recipe.getNextAlertingPhase().ingredientName} - ${timer.recipe.getNextAlertingPhase().phaseName}",
                       style: Theme.of(context).textTheme.subtitle2
                   ),
                   DurationView(

@@ -18,14 +18,14 @@ class TimelineTab extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.only(left: 10, top: 20, bottom: 15),
                 child: const Text(
-                  "Starting In",
+                  "শুরু হচ্ছে",
                   // style: Theme.of(context).textTheme.subhead.copyWith(fontSize: 20),
                 ),
               ),
               Container(
                 padding: const EdgeInsets.only(right: 10, top: 20, bottom: 15),
                 child: const Text(
-                  "Finishing In",
+                  "সমাপ্তি",
                   // style: Theme.of(context).textTheme.subhead.copyWith(fontSize: 20),
                 ),
               )

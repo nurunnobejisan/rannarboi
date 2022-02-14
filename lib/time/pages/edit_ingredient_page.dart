@@ -45,7 +45,7 @@ class _EditIngredientPageState extends State<EditIngredientPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Edit Ingredient"),
+        title: const Text("উপাদান সম্পাদনা"),
         actions: <Widget>[
           FlatButton(
               onPressed: submit,
@@ -110,7 +110,7 @@ class _EditIngredientPageState extends State<EditIngredientPage> {
             child: Container(
               padding: const EdgeInsets.only(top: 10),
               child: const Text(
-                "Ingredient Cook Time",
+                "উপাদান রান্নার সময়",
                 // style:
                     // Theme.of(context).textTheme.subhead.copyWith(fontSize: 20),
               ),
@@ -138,7 +138,7 @@ class _EditIngredientPageState extends State<EditIngredientPage> {
             padding: const EdgeInsets.all(10),
             child: Title(
               child: const Text(
-                "Cooking Steps",
+                "রান্নার ধাপ",
                 // style:
                     // Theme.of(context).textTheme.subhead.copyWith(fontSize: 20),
               ),
@@ -163,7 +163,7 @@ class _EditIngredientPageState extends State<EditIngredientPage> {
                     })
                 : ListTile(
                     title: Text(
-                      "Try Adding a Cooking Step",
+                      "একটি রান্নার ধাপ যোগ করার চেষ্টা করুন",
                       style: Theme.of(context).textTheme.caption,
                       textAlign: TextAlign.center,
                     ),
@@ -220,7 +220,7 @@ class _EditIngredientPageState extends State<EditIngredientPage> {
         // style: Theme.of(context).textTheme.headline.copyWith(fontSize: 30),
         controller: nameController,
         onChanged: (value) {},
-        decoration: const InputDecoration(hintText: "e.g. Potatoes"),
+        decoration: const InputDecoration(hintText: "যেমন আলু"),
       ),
     );
   }

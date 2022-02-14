@@ -16,7 +16,7 @@ class SplashScreen extends StatelessWidget {
             ),
             const Text(
               "Sous Chef",
-              style: const TextStyle(color: Colors.white, fontSize: 50, fontWeight: FontWeight.bold)
+              style: TextStyle(color: Colors.white, fontSize: 5, fontWeight: FontWeight.bold)
 
             ),
             const CircularProgressIndicator()

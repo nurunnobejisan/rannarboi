@@ -70,15 +70,15 @@ class IngredientListView extends StatelessWidget {
                   return [
                     const PopupMenuItem<String>(
                       value: "edit",
-                      child: Text("Edit Ingredient"),
+                      child: Text("উপাদান সম্পাদনা"),
                     ),
                     const PopupMenuItem<String>(
                       value: "add",
-                      child: Text("Add Step"),
+                      child: Text("ধাপ যোগ করুন"),
                     ),
                     const PopupMenuItem<String>(
                       value: "delete",
-                      child: Text("Delete Ingredient"),
+                      child: Text("উপাদান মুছুন"),
                     ),
                   ];
                 }),

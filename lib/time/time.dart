@@ -136,13 +136,16 @@ class cooking_timeAppState extends State<cooking_timeApp> {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       navigatorKey: navigatorKey,
       theme: ThemeData(
-          primarySwatch: Colors.purple,
+          primarySwatch: Colors.orange,
           brightness: Brightness.light,
-          accentColor: Colors.purpleAccent),
+          accentColor: const Color(0xfff55a00),),
+
       initialRoute: '/',
       routes: {
         '/': (context) {

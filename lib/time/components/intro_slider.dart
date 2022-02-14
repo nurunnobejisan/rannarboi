@@ -16,8 +16,8 @@ class _HelpSliderState extends State<HelpSlider> {
   void initState() {
     super.initState();
     slides.add(Slide(
-        title: "Welcome to Bangla Chef",
-        backgroundColor: Colors.orange,
+        title: "বাংলা শেফ-এ আপনাকে স্বাগতম",
+        backgroundColor: Colors.pinkAccent,
         centerWidget: Image.asset(
           "assets/chef-hat.png",
           height: 200,
@@ -25,8 +25,8 @@ class _HelpSliderState extends State<HelpSlider> {
         description:
             "আপনার সমস্ত খাবার একই সময়ে শেষ হয় তা নিশ্চিত করতে আমি এখানে আছি"));
     slides.add(Slide(
-        title: "Recipes",
-        backgroundColor: Colors.blue,
+        title: "রেসিপি",
+        backgroundColor: Colors.blueAccent,
         centerWidget: Image.asset(
           "assets/recipe.png",
           height: 200,
@@ -35,8 +35,8 @@ class _HelpSliderState extends State<HelpSlider> {
             "প্রতিটি রেসিপিতে একাধিক উপাদান থাকতে পারে। প্রতিটি ডিশের জন্য একটি উপাদান যোগ করুন, যেমন আলু বা মুরগি।  "
             "প্রতিটি উপাদানের জন্য টাইমারগুলি অনুকরণীয়ভাবে চলবে এবং একই সময়ে শেষ হবে"));
     slides.add(Slide(
-        title: "Ingredients",
-        backgroundColor: Colors.red,
+        title: "উপকরণসমূহ",
+        backgroundColor: Colors.purpleAccent,
         centerWidget: Image.asset(
           "assets/fish.png",
           height: 200,
@@ -44,8 +44,8 @@ class _HelpSliderState extends State<HelpSlider> {
         description: "উপাদানগুলি পর্যায়ক্রমে গঠিত হয়। "
             "একাধিক ফেজ যোগ করুন যদি আপনি একটি উপাদানের জন্য বিভিন্ন পদক্ষেপ করতে চান, যেমন 20 মিনিটের জন্য marinade তারপর 40 মিনিটের জন্য বেক করুন"));
     slides.add(Slide(
-        title: "Start The Timer",
-        backgroundColor: Colors.green,
+        title: "টাইমার শুরু করুন",
+        backgroundColor: Colors.greenAccent,
         centerWidget: Image.asset(
           "assets/stopwatch.png",
           height: 200,
@@ -53,14 +53,16 @@ class _HelpSliderState extends State<HelpSlider> {
         description: "একবার আপনার টাইমার প্রস্তুত হয়ে গেলে, প্লে টিপুন।"
         "একবার একটি উপাদান টাইমার শুরু হতে চলেছে একবার আপনি বিজ্ঞপ্তি পাবেন, এবং প্রতিবার একটি ফেজ শেষ হয়"));
     slides.add(Slide(
-        title: "Schedule Timers",
-        backgroundColor: Colors.orange,
+        title: "সময়সূচী টাইমার",
+        backgroundColor: Colors.orangeAccent,
         centerWidget: Image.asset(
           "assets/scheduledstopwatch.png",
           height: 200,
         ),
         description: "একটি নির্দিষ্ট সময়ে শেষ করার জন্য একটি টাইমার নির্ধারণ করুন।"
-        "Sous শেফ আপনার প্রথম ডিশ মধ্যে রাখা সময় কখন আপনাকে জানাতে হবে"));
+        "Sous শেফ আপনার প্রথম ডিশ মধ্যে রাখা সময় কখন আপনাকে জানাতে হবে",)
+
+    );
   }
 
   void goHome(BuildContext context) {

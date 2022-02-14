@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cookbook/time/components/custom_drawer.dart';
 import 'package:cookbook/time/components/recipe_view.dart';
 import 'package:cookbook/time/model/recipe.dart';
 import 'package:cookbook/time/model/timer_model.dart';
@@ -31,7 +30,7 @@ class _RecipesPageState extends State<RecipesPage> {
       appBar: AppBar(
         title: const Text("Recipes"),
       ),
-      drawer: const CustomDrawer(),
+
       body: SafeArea(
           child: StreamBuilder(
               stream: widget.recipesFuture,
@@ -94,7 +93,7 @@ class _RecipesPageState extends State<RecipesPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
-              child: const Text("Running Timer",
+              child: const Text("টাইমার চলছে",
                   // style: Theme
                   //     .of(context)
                   //     .textTheme
@@ -134,20 +133,20 @@ class _RecipesPageState extends State<RecipesPage> {
       context: context,
       builder: (context) =>
           AlertDialog(
-            title: const Text("You Have a Timer Running"),
-            content: const Text("Current timer will be stopped"),
+            title: const Text("আপনি একটি টাইমার চলমান আছে"),
+            content: const Text("বর্তমান টাইমার বন্ধ করা হবে"),
             actions: <Widget>[
               FlatButton(
                 onPressed: () {
                   onContinue();
                 },
-                child: const Text("Continue"),
+                child: const Text("চালিয়ে যান"),
               ),
               FlatButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
-                child: const Text("Cancel"),
+                child: const Text("বাতিল করুন"),
               )
             ],
           ),

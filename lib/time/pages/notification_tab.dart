@@ -20,7 +20,7 @@ class NotificationTab extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.only(left: 10, top: 10),
                 child: const Text(
-                  "Recent",
+                  "সাম্প্রতিক",
                   // style: Theme.of(context)
                   //     .textTheme
                   //     .subhead
@@ -65,7 +65,7 @@ class NotificationTab extends StatelessWidget {
                                   .difference(notifications[i].happendAt)
                                   .inMinutes
                                   .toString() +
-                              "m ago"),
+                              "মি আগে"),
                           subtitle: Text(notifications[i].action),
                           title: Text(notifications[i].title)),
                     ));
