@@ -1,8 +1,8 @@
 import 'dart:async';
 import 'dart:ui';
 
-// import 'package:audioplayers/audio_cache.dart';
-// import 'package:audioplayers/audioplayers.dart';
+
+import 'package:audioplayers/audioplayers.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -116,14 +116,14 @@ class cooking_timeAppState extends State<cooking_timeApp> {
   List<NotificationModel> notifications = [];
   Recipe currentRecipe = Recipe.empty();
   late Future<TimerModel> timerFuture;
-  // AudioCache audioCache = new AudioCache();
-  // AudioPlayer audioPlayer;
+ AudioCache audioCache = new AudioCache();
+  late AudioPlayer audioPlayer;
   bool alerting = false;
 
   @override
   void initState() {
     super.initState();
-    // Firebase.initializeApp();
+    Firebase.initializeApp();
     firestore.getUserDocument();
     _configureNotifications();
     currentRecipe = Recipe.empty();
@@ -249,18 +249,18 @@ class cooking_timeAppState extends State<cooking_timeApp> {
   }
 
   void playNotificationSound() {
-    // if (audioPlayer == null) {
-    //   audioCache.loop('beeping.mp3', isNotification: true).then((player) {
-    //     if (audioPlayer == null) {
-    //       audioPlayer = player;
-    //     } else {
-    //       //pause extra created player
-    //       player.pause();
-    //     }
-    //   });
-    // } else {
-    //   audioPlayer.resume();
-    // }
+    if (audioPlayer == null) {
+      audioCache.loop('beeping.mp3', isNotification: true).then((player) {
+        if (audioPlayer == null) {
+          audioPlayer = player;
+       } else {
+           //pause extra created player
+       player.pause();
+         }
+       });
+     } else {
+     audioPlayer.resume();
+     }
     alerting = true;
   }
 
@@ -280,7 +280,7 @@ class cooking_timeAppState extends State<cooking_timeApp> {
   }
 
   void muteAlarm() {
-    // audioPlayer?.pause();
+   audioPlayer?.pause();
     setState(() {
       alerting = false;
     });

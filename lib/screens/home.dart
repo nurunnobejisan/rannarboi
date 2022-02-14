@@ -413,7 +413,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                       builder: (context) {
                                         return AlertDialog(
                                           title: const Text(
-                                              "Exit from স্বাস্থ্য সেবা"),
+                                              "Exit from রান্নার বই"),
                                           content: const Text(
                                               "Are you sure want to exit"),
                                           actions: [
@@ -446,30 +446,21 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             ///getHelp...........
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () => _closePopup("Upcoming"),
                               child: Container(
                                 width: double.maxFinite,
-                                height: 150,
+                                height: 70,
                                 padding: const EdgeInsets.symmetric(
-                                    horizontal: 16, vertical: 16),
+                                    horizontal: 10, vertical: 10),
                                 decoration: BoxDecoration(
-                                  color: const Color(0xFFC2E3F6),
-                                  borderRadius: BorderRadius.circular(16),
+                                  color: const Color(0xFF7DA0A0),
+                                  borderRadius: BorderRadius.circular(32),
                                 ),
                                 child: Center(
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Center(
-                                          child: Image.asset(
-                                            "assets/logo.png",
-                                            height:
-                                            MediaQuery
-                                                .of(context)
-                                                .size
-                                                .height *
-                                                .12,
-                                          )),
+                                      Center(child: Image.asset("assets/images/logo.png", height: 50,)),
                                     ],
                                   ),
                                 ),

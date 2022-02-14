@@ -45,6 +45,7 @@ dependencies:
   flutter_local_notifications: ^9.1.5
   shared_preferences: ^2.0.13
   simple_animations: ^4.0.1
+  audioplayers: ^0.20.1
 
 
 dev_dependencies:
@@ -72,6 +73,7 @@ flutter:
   assets:
     - data/recipes.json
     - assets/images/
+    - images/
     - assets/chef-hat.png
     - assets/recipe.png
     - assets/fish.png
