@@ -9,7 +9,7 @@ class ControlButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Opacity(opacity: 0.5,
-      child: Container(
+      child: SizedBox(
         width: 80.0,
         height: 80.0,
         child: FittedBox(

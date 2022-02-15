@@ -22,7 +22,7 @@ class ControlPanel extends StatelessWidget {
                   children: [
                     Expanded(child: Container()),
                     ControlButton(
-                        icon: Icon(Icons.arrow_left),
+                        icon: const Icon(Icons.arrow_left),
                         onPressed: () {
                           onTapped(Direction.left);
                         }),
@@ -32,15 +32,15 @@ class ControlPanel extends StatelessWidget {
                 child: Column(
                   children: [
                     ControlButton(
-                        icon: Icon(Icons.arrow_drop_up),
+                        icon: const Icon(Icons.arrow_drop_up),
                         onPressed: () {
                           onTapped(Direction.up);
                         }),
-                    SizedBox(
+                    const SizedBox(
                       height: 70,
                     ),
                     ControlButton(
-                        icon: Icon(Icons.arrow_drop_down),
+                        icon: const Icon(Icons.arrow_drop_down),
                         onPressed: () {
                           onTapped(Direction.down);
                         }),
@@ -50,7 +50,7 @@ class ControlPanel extends StatelessWidget {
                 child: Row(
                   children: [
                     ControlButton(
-                        icon: Icon(Icons.arrow_right),
+                        icon: const Icon(Icons.arrow_right),
                         onPressed: () {
                           onTapped(Direction.right);
                         }),

@@ -46,6 +46,12 @@ dependencies:
   shared_preferences: ^2.0.13
   simple_animations: ^4.0.1
   audioplayers: ^0.20.1
+  animated_text_kit: ^4.2.1
+  wave: ^0.2.0
+  google_fonts: ^2.1.0
+  circle_list: ^1.0.5
+  vibration: ^1.7.4-nullsafety.0
+
 
 
 dev_dependencies:
@@ -80,6 +86,17 @@ flutter:
     - assets/stopwatch.png
     - assets/scheduledstopwatch.png
     - assets/beeping.mp3
+    - assets/images/magicWand.png
+    - assets/images/rainbow.png
+    - assets/images/whiteHalo.png
+    - assets/images/cupcake.png
+    - assets/images/unicorn1.png
+    - assets/images/unicorn2.png
+    - assets/images/unicorn3.png
+    - assets/images/background.jpg
+    - assets/images/top.png
+    - assets/sounds/rainbow.wav
+    - assets/sounds/magicWand.wav
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -94,6 +111,8 @@ flutter:
   # example:
   fonts:
     - family: Hellix
+    - family: PressStart
+    - family: NS
       fonts:
         - asset: fonts/Hellix-Regular.ttf
         - asset: fonts/Hellix-Bold.ttf
@@ -102,6 +121,8 @@ flutter:
           weight: 600
         - asset: fonts/Hellix-Medium.ttf
           weight: 500
+        - asset: assets/PressStart2P-Regular.ttf
+
 
 
   # For details regarding fonts from package dependencies,

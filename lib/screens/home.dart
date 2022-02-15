@@ -1,6 +1,10 @@
 
 import 'dart:io';
 import 'package:cookbook/GamePage1/game.dart';
+import 'package:cookbook/GamePage1/game2.dart';
+import 'package:cookbook/GamePage1/game3.dart';
+import 'package:cookbook/GamePage1/game4/game4.dart';
+import 'package:cookbook/GamePage1/game5/game5.dart';
 import 'package:cookbook/popmore/privacy_policy.dart';
 import 'package:cookbook/time/time.dart';
 import 'package:cookbook/widgets/categories.dart';
@@ -65,34 +69,99 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-              IconButton(
-                icon: const Icon(
-                  Icons.timer,
-                ),
-                color: Colors.orange,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const cooking_timeApp(),
+              Row(
+                children: [
+                  IconButton(
+                    icon: const Icon(
+                      Icons.timer,
                     ),
-                  );
-                },
-              ),
-              IconButton(
-                icon: const Icon(
-                  Icons.timer,
-                ),
-                color: Colors.orange,
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => cookbook(),
+                    color: Colors.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const cooking_timeApp(),
+                        ),
+                      );
+                    },
+                  ),
+                  IconButton(
+                    icon: const Icon(
+                      Icons.time_to_leave_rounded,
                     ),
-                  );
-                },
+                    color: Colors.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>  const DragScreen(),
+                        ),
+                      );
+                    },
+                  ),
+                  IconButton(
+                    icon: const Icon(
+                      Icons.hd,
+                    ),
+                    color: Colors.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const cookbook(),
+
+
+                        ),
+                      );
+                    },
+                  ),
+                  IconButton(
+                    icon: const Icon(
+                      Icons.face,
+                    ),
+                    color: Colors.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>  const GameHomeView(tilesCount: 4,),
+                        ),
+                      );
+                    },
+                  ),
+                  IconButton(
+                    icon: const Icon(
+                      Icons.emoji_emotions,
+                    ),
+                    color: Colors.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const game4(title: '',),
+                        ),
+                      );
+                    },
+                  ),
+
+                  IconButton(
+                    icon: const Icon(
+                      Icons.emoji_flags,
+                    ),
+                    color: Colors.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const game5(title: '',),
+                        ),
+                      );
+                    },
+                  ),
+                ],
               ),
+
+
 
               const SizedBox(
                 height: 20,

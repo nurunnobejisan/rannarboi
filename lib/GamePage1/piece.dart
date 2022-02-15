@@ -26,7 +26,7 @@ class _PieceState extends State<Piece> with SingleTickerProviderStateMixin{
     _animationController =AnimationController(vsync: this,
         lowerBound: 0.25,
         upperBound: 1.0,
-        duration: Duration(milliseconds: 1000));
+        duration: const Duration(milliseconds: 1000));
     _animationController!.addStatusListener((status) {
       if(status==AnimationStatus.completed){
         _animationController!.reset();
@@ -49,7 +49,7 @@ class _PieceState extends State<Piece> with SingleTickerProviderStateMixin{
             height: widget.size.toDouble(),
             decoration: BoxDecoration(
                 color: widget.color,
-                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                borderRadius: const BorderRadius.all(Radius.circular(10.0)),
                 border: Border.all(width: 2.0,color: Colors.white)
             ),
           ),

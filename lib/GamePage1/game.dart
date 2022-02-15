@@ -124,27 +124,27 @@ class _cookbookState extends State<cookbook> {
         builder: (ctx){
           return AlertDialog(
             backgroundColor: Colors.red,
-            shape: RoundedRectangleBorder(
+            shape: const RoundedRectangleBorder(
                 side: BorderSide(
                   color: Colors.blue,
                   width: 3.0,
                 ),
                 borderRadius: BorderRadius.all(Radius.circular(10.0))
             ),
-            title: Text(
-              "Game Over",
+            title: const Text(
+              "খেলা শেষ",
               style: TextStyle(color: Colors.white),
             ),content: Text(
-            (score>10)?"Your game is over but you played well. Your score is " + score.toString()+".": "Your game is over. Your score is " + score.toString()+"."
+            (score>10)?"তোমার খেলা শেষ কিন্তু তুমি ভালো খেলেছ। তোমার সংগ্রহ " + score.toString()+".": "আপনার খেলা শেষ. তোমার সংগ্রহ " + score.toString()+"."
             ,
-            style: TextStyle(color: Colors.white,fontSize: 20),
+            style: const TextStyle(color: Colors.white,fontSize: 20),
           ),
             actions: [
               TextButton(onPressed: ()async{
                 Navigator.of(context).pop();
                 restart();
-              }, child: Text(
-                'Restart',
+              }, child: const Text(
+                'আবার শুরু',
                 style: TextStyle(fontSize: 24,color: Colors.white,fontWeight: FontWeight.bold),
               ))
             ],
@@ -171,7 +171,7 @@ class _cookbookState extends State<cookbook> {
       if(timer!=null &&timer!.isActive){
         timer!.cancel();
       }
-      await Future.delayed(Duration(milliseconds: 200),()=>showGameOverDialog());
+      await Future.delayed(const Duration(milliseconds: 200),()=>showGameOverDialog());
       return position;
     }
     return nextPosition;
@@ -222,7 +222,7 @@ class _cookbookState extends State<cookbook> {
         right: 40,
         child: Text(
           'Score: ${score.toString()}',
-          style: TextStyle(fontSize: 30, color: Colors.white),
+          style: const TextStyle(fontSize: 30, color: Colors.white),
         ));
   }
 
