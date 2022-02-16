@@ -5,6 +5,8 @@ import 'package:cookbook/GamePage1/game2.dart';
 import 'package:cookbook/GamePage1/game3.dart';
 import 'package:cookbook/GamePage1/game4/game4.dart';
 import 'package:cookbook/GamePage1/game5/game5.dart';
+import 'package:cookbook/pages/elastic_drawer.dart';
+import 'package:cookbook/pages/slider.dart';
 import 'package:cookbook/popmore/privacy_policy.dart';
 import 'package:cookbook/time/time.dart';
 import 'package:cookbook/widgets/categories.dart';
@@ -138,12 +140,25 @@ class HomePage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => const game4(title: '',),
+                          builder: (context) => const Elasticdrawer(),
                         ),
                       );
                     },
                   ),
-
+                  IconButton(
+                    icon: const Icon(
+                      Icons.emoji_emotions,
+                    ),
+                    color: Colors.orange,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Carousel(),
+                        ),
+                      );
+                    },
+                  ),
                   IconButton(
                     icon: const Icon(
                       Icons.emoji_flags,

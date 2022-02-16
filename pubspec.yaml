@@ -51,6 +51,8 @@ dependencies:
   google_fonts: ^2.1.0
   circle_list: ^1.0.5
   vibration: ^1.7.4-nullsafety.0
+  elastic_drawer: ^2.0.2
+  carousel_slider: ^4.0.0
 
 
 
