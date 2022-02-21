@@ -53,7 +53,9 @@ dependencies:
   vibration: ^1.7.4-nullsafety.0
   elastic_drawer: ^2.0.2
   carousel_slider: ^4.0.0
-
+  transparent_image: ^2.0.0
+  math_expressions: ^2.3.0
+  flutter_neumorphic: ^3.2.0
 
 
 dev_dependencies:
@@ -99,6 +101,7 @@ flutter:
     - assets/images/top.png
     - assets/sounds/rainbow.wav
     - assets/sounds/magicWand.wav
+    - sounds/Ringtone.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

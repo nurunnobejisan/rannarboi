@@ -1,4 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:cookbook/pages/list_youtube.dart';
+import 'package:cookbook/popmore/about%20me.dart';
 import 'package:flutter/material.dart';
 
 class Carousel extends StatefulWidget {
@@ -107,8 +109,19 @@ class _MoviesPageState extends State<Carousel> {
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(20),
                                     ),
-                                    child: Image.network(movie['image'],
-                                        fit: BoxFit.cover),
+                                    child: InkWell(
+                                      child: Image.network(movie['image'],
+                                          fit: BoxFit.cover),
+                                      onTap: () {
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>  const ListViewPage(),
+                                          ),
+                                        );
+                                      },
+                                    ),
+
                                   ),
                                 ),
                                 const SizedBox(height: 20),

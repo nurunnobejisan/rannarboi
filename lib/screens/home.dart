@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'package:cookbook/GamePage1/game.dart';
 import 'package:cookbook/GamePage1/game2.dart';
@@ -9,15 +8,13 @@ import 'package:cookbook/pages/elastic_drawer.dart';
 import 'package:cookbook/pages/slider.dart';
 import 'package:cookbook/popmore/privacy_policy.dart';
 import 'package:cookbook/time/time.dart';
+import 'package:cookbook/time2/time2.dart';
 import 'package:cookbook/widgets/categories.dart';
 import 'package:cookbook/widgets/food_showcase.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../popmore/about me.dart';
 import 'package:flutter/services.dart';
-
-
-
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -73,6 +70,108 @@ class HomePage extends StatelessWidget {
               ),
               Row(
                 children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        IconButton(
+                          icon: const Icon(
+                            Icons.hd,
+                          ),
+                          color: Colors.orange,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const cookbook(),
+                              ),
+                            );
+                          },
+                        ),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.face,
+                          ),
+                          color: Colors.orange,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const GameHomeView(
+                                  tilesCount: 4,
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.emoji_emotions,
+                          ),
+                          color: Colors.orange,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Elasticdrawer(),
+                              ),
+                            );
+                          },
+                        ),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.emoji_emotions,
+                          ),
+                          color: Colors.orange,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Carousel(),
+                              ),
+                            );
+                          },
+                        ),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.hd,
+                          ),
+                          color: Colors.orange,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const NeuTimer(),
+                              ),
+                            );
+                          },
+                        ),
+                        IconButton(
+                          icon: const Icon(
+                            Icons.emoji_flags,
+                          ),
+                          color: Colors.orange,
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const game5(
+                                  title: '',
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                children: [
                   IconButton(
                     icon: const Icon(
                       Icons.timer,
@@ -89,97 +188,19 @@ class HomePage extends StatelessWidget {
                   ),
                   IconButton(
                     icon: const Icon(
-                      Icons.time_to_leave_rounded,
+                      Icons.face_retouching_off_sharp,
                     ),
                     color: Colors.orange,
                     onPressed: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) =>  const DragScreen(),
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.hd,
-                    ),
-                    color: Colors.orange,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const cookbook(),
-
-
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.face,
-                    ),
-                    color: Colors.orange,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>  const GameHomeView(tilesCount: 4,),
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.emoji_emotions,
-                    ),
-                    color: Colors.orange,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Elasticdrawer(),
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.emoji_emotions,
-                    ),
-                    color: Colors.orange,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Carousel(),
-                        ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.emoji_flags,
-                    ),
-                    color: Colors.orange,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const game5(title: '',),
+                          builder: (context) => const DragScreen(),
                         ),
                       );
                     },
                   ),
                 ],
-              ),
-
-
-
-              const SizedBox(
-                height: 20,
               ),
               const Categories(),
               const SizedBox(
@@ -190,9 +211,7 @@ class HomePage extends StatelessWidget {
                 thickness: 0.2,
                 indent: 25,
                 endIndent: 25,
-                color: Theme
-                    .of(context)
-                    .primaryColorDark,
+                color: Theme.of(context).primaryColorDark,
               ),
               const SizedBox(
                 height: 20,
@@ -221,7 +240,7 @@ class HomePage extends StatelessWidget {
           ),
         ));
   }
-  }
+}
 
 class MyPopupMenu extends StatefulWidget {
   final Widget child;
@@ -326,11 +345,8 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                 Positioned(
                   left: 0,
                   right:
-                  (MediaQuery
-                      .of(context)
-                      .size
-                      .width - widget.position.dx) -
-                      widget.size.width,
+                      (MediaQuery.of(context).size.width - widget.position.dx) -
+                          widget.size.width,
                   top: widget.position.dy,
                   child: AnimatedBuilder(
                     animation: _animationController,
@@ -408,7 +424,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) =>
-                                        const PrivacyPolicy()));
+                                            const PrivacyPolicy()));
                               },
                               child: Row(
                                 children: [
@@ -442,9 +458,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             ///Share Now.........
                             GestureDetector(
-                              onTap: () {
-
-                              },
+                              onTap: () {},
                               child: Row(
                                 children: [
                                   Container(
@@ -477,14 +491,8 @@ class _PopupMenuContentState extends State<PopupMenuContent>
 
                             ///Exit.............
                             SizedBox(
-                              height: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .height * .06,
-                              width: MediaQuery
-                                  .of(context)
-                                  .size
-                                  .width,
+                              height: MediaQuery.of(context).size.height * .06,
+                              width: MediaQuery.of(context).size.width,
                               child: ListTile(
                                 title: Text(
                                   "Exit",
@@ -522,7 +530,7 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                               },
                                               child: const Text("No",
                                                   style:
-                                                  TextStyle(fontSize: 20)),
+                                                      TextStyle(fontSize: 20)),
                                             ),
                                             FlatButton(
                                               onPressed: () {
@@ -559,7 +567,11 @@ class _PopupMenuContentState extends State<PopupMenuContent>
                                   child: Column(
                                     mainAxisAlignment: MainAxisAlignment.center,
                                     children: [
-                                      Center(child: Image.asset("assets/images/logo.png", height: 50,)),
+                                      Center(
+                                          child: Image.asset(
+                                        "assets/images/logo.png",
+                                        height: 50,
+                                      )),
                                     ],
                                   ),
                                 ),
@@ -587,4 +599,3 @@ class _PopupMenuContentState extends State<PopupMenuContent>
     });
   }
 }
-
