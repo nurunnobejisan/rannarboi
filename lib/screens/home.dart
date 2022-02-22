@@ -2,9 +2,7 @@ import 'dart:io';
 import 'package:cookbook/GamePage1/game.dart';
 import 'package:cookbook/GamePage1/game2.dart';
 import 'package:cookbook/GamePage1/game3.dart';
-import 'package:cookbook/GamePage1/game4/game4.dart';
 import 'package:cookbook/GamePage1/game5/game5.dart';
-import 'package:cookbook/pages/slider.dart';
 import 'package:cookbook/popmore/privacy_policy.dart';
 import 'package:cookbook/time/time.dart';
 import 'package:cookbook/time2/time2.dart';
@@ -13,8 +11,6 @@ import 'package:cookbook/widgets/food_showcase.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../popmore/about me.dart';
-import 'package:flutter/services.dart';
-
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -233,44 +229,6 @@ class HomePage extends StatelessWidget {
                         child: Container(
                           width: 100,
                           height: 100,
-                          decoration: BoxDecoration(
-                            image: const DecorationImage(
-                              image: AssetImage(
-                                  'assets/images/chicken-oats-haleem.jpg'),
-                              fit: BoxFit.fill,
-                            ),
-                            borderRadius:
-                            BorderRadius.circular(100.0),
-                          ),
-                        ),
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                              const Carousel(),
-
-                            ),
-                          );
-                        },
-                      ),
-
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-
-
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: InkWell(
-                        child: Container(
-                          width: 100,
-                          height: 100,
                           decoration: const BoxDecoration(
                             image: DecorationImage(
                               image: AssetImage(
@@ -292,9 +250,11 @@ class HomePage extends StatelessWidget {
                       ),
 
                     ),
+
                   ],
                 ),
               ),
+
               const Categories(),
               const SizedBox(
                 height: 20,
