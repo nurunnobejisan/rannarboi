@@ -4,7 +4,6 @@ import 'package:cookbook/GamePage1/game2.dart';
 import 'package:cookbook/GamePage1/game3.dart';
 import 'package:cookbook/GamePage1/game4/game4.dart';
 import 'package:cookbook/GamePage1/game5/game5.dart';
-import 'package:cookbook/pages/elastic_drawer.dart';
 import 'package:cookbook/pages/slider.dart';
 import 'package:cookbook/popmore/privacy_policy.dart';
 import 'package:cookbook/time/time.dart';
@@ -74,70 +73,24 @@ class HomePage extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Row(
                       children: [
-                        IconButton(
-                          icon: const Icon(
-                            Icons.hd,
-                          ),
-                          color: Colors.orange,
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const cookbook(),
-                              ),
-                            );
-                          },
-                        ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.face,
-                          ),
-                          color: Colors.orange,
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const GameHomeView(
-                                  tilesCount: 4,
+
+                        InkWell(
+                          child: Padding(
+                            padding: const EdgeInsets.all(1.0),
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/scheduledstopwatch.png'),
                                 ),
                               ),
-                            );
-                          },
-                        ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.emoji_emotions,
+                            ),
+
+
                           ),
-                          color: Colors.orange,
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Elasticdrawer(),
-                              ),
-                            );
-                          },
-                        ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.emoji_emotions,
-                          ),
-                          color: Colors.orange,
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Carousel(),
-                              ),
-                            );
-                          },
-                        ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.hd,
-                          ),
-                          color: Colors.orange,
-                          onPressed: () {
+                          onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -146,12 +99,26 @@ class HomePage extends StatelessWidget {
                             );
                           },
                         ),
-                        IconButton(
-                          icon: const Icon(
-                            Icons.emoji_flags,
+
+                        InkWell(
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              decoration: const BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(
+                                      'assets/images/unicorn2.png'),
+                                  fit: BoxFit.fill,
+                                ),
+                                shape: BoxShape.circle,
+                              ),
+                            ),
+
+
                           ),
-                          color: Colors.orange,
-                          onPressed: () {
+                          onTap: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
@@ -165,42 +132,168 @@ class HomePage extends StatelessWidget {
                       ],
                     ),
                   ),
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Row(
-                children: [
-                  IconButton(
-                    icon: const Icon(
-                      Icons.timer,
-                    ),
-                    color: Colors.orange,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const cooking_timeApp(),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: InkWell(
+                      child: Container(
+                        width: 100,
+                        height: 100,
+                        decoration: BoxDecoration(
+                          image: const DecorationImage(
+                            image: AssetImage(
+                                'assets/images/magicWand.png'),
+                            fit: BoxFit.fill,
+                          ),
+                          borderRadius:
+                          BorderRadius.circular(100.0),
                         ),
-                      );
-                    },
-                  ),
-                  IconButton(
-                    icon: const Icon(
-                      Icons.face_retouching_off_sharp,
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                            const DragScreen(),
+
+                          ),
+                        );
+                      },
                     ),
-                    color: Colors.orange,
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const DragScreen(),
-                        ),
-                      );
-                    },
+
                   ),
                 ],
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+                    InkWell(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/chicken1.jpg'),
+                              fit: BoxFit.fill,
+                            ),
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+
+
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const cookbook(),
+                          ),
+                        );
+                      },
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: InkWell(
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/oats4.jpg'),
+                              fit: BoxFit.fill,
+                            ),
+                            shape: BoxShape.circle,
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const GameHomeView(
+                                tilesCount: 4,
+                              ),
+
+                            ),
+                          );
+                        },
+                      ),
+
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: InkWell(
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            image: const DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/chicken-oats-haleem.jpg'),
+                              fit: BoxFit.fill,
+                            ),
+                            borderRadius:
+                            BorderRadius.circular(100.0),
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                              const Carousel(),
+
+                            ),
+                          );
+                        },
+                      ),
+
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: [
+
+
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: InkWell(
+                        child: Container(
+                          width: 100,
+                          height: 100,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/stopwatch.png'),
+                              fit: BoxFit.fill,
+                            ),
+                          ),
+                        ),
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                              const cooking_timeApp(),
+
+                            ),
+                          );
+                        },
+                      ),
+
+                    ),
+                  ],
+                ),
               ),
               const Categories(),
               const SizedBox(
