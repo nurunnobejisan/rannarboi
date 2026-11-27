@@ -2,6 +2,10 @@
 
 A Flutter recipe browser for Bangla-language cooking: browse dishes from a structured JSON dataset, filter by category, and read ingredients and cooking steps with images.
 
+## Screenshot
+
+![Home screen](screenshots/home.png)
+
 ## Features
 
 - Recipe list with cached network images and category filters (state via `provider`)
