@@ -1,16 +1,28 @@
-# cookbook
+# Bangla Recipe App
 
-A new Flutter project.
+A Flutter recipe browser for Bangla-language cooking: browse dishes from a structured JSON dataset, filter by category, and read ingredients and cooking steps with images.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- Recipe list with cached network images and category filters (state via `provider`)
+- Recipe detail view with ingredients and step-by-step cooking instructions
+- Intro slider, splash screen, and countdown cooking timer with local notifications
+- Recipe scheduling reminders using `flutter_background_service`
+- Firestore-backed recipe data with offline-friendly caching
 
-A few resources to get you started if this is your first Flutter project:
+## Tech stack
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Flutter · Dart · Provider · Cloud Firestore · Firebase · flutter_local_notifications · cached_network_image
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## How to run
+
+```bash
+flutter pub get
+flutter run
+```
+
+Requires a Flutter SDK (3.x recommended) and, for Firestore features, a Firebase project configured for Android/iOS (`flutterfire configure`).
+
+## License
+
+MIT
